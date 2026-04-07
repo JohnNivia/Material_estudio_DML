@@ -1,5 +1,9 @@
+
+/* creacion base datos */
 CREATE DATABASE Trazabilidad_SGVA;
+/* Se usa la base datos */
 USE Trazabilidad_SGVA;
+/* se crea una tabla trazabilidad con atribuyos*/
 CREATE TABLE trazabilidad(
 	id_trazabilidad INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nombre_empresa VARCHAR(45) NOT NULL,
@@ -11,19 +15,20 @@ CREATE TABLE trazabilidad(
     correo VARCHAR (60) not null,
     estado VARCHAR (60) not null
     );
+/* crear tabla llamada enpresa con atributos */
 CREATE TABLE Empresa(
 	id_empresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     codigo_empresa VARCHAR(80) NOT NULL,
     nombre_empresa VARCHAR(70) NOT NULL
     );
 DESCRIBE Empresa;
-
+/* Insertar información (codigo y nombre)*/
 INSERT INTO Empresa (codigo_empresa, nombre_empresa)
 VALUES ('COD1','VC@SOFT S A S');
 
 INSERT INTO Empresa (codigo_empresa, nombre_empresa)
 VALUES ('COD2','ENERGITEL S.A.S');
-
+/* Insertar información (nombre codigo)*/
 INSERT INTO Empresa (nombre_empresa, codigo_empresa)
 VALUES ('GENSER POWER COLOMBIA', 'COD3');
 
@@ -47,7 +52,7 @@ VALUES ('COD9', 'SQDM S A S');
 
 INSERT INTO Empresa
 VALUES ('COD10', 'SIMIL TECH SAS');
-
+/* insertar valores de la empresa (codigo y nombre en un solo insert)*/
 INSERT INTO Empresa (codigo_empresa, nombre_empresa)
 VALUES ('COD11','SATELCO INTERACTIVO S.A.S.'),
 ('COD12','YES CONTACT & BPO S.A.S. - YES BPO S.A.S.'),
